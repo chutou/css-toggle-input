@@ -52,6 +52,14 @@ Use the following markup
         <label for="small">small</label>
     </div>
 
+    <div class="toggle toggle">
+                <input type="checkbox" id="default2" name="default2-setting" checked/>
+                <label for="default2">default</label>
+            </div>
+            <label for="default2">default</label>
+        </div>
+    <div>
+
     <div>
         <div class="toggle toggle-lg">
             <input type="checkbox" id="large" name="large-setting" checked/>
@@ -148,6 +156,14 @@ Use the following markup
         </div>
         <label for="small">small</label>
     </div>
+
+    <div class="toggle toggle">
+                <input type="checkbox" id="default2" name="default2-setting" checked/>
+                <label for="default2">default</label>
+            </div>
+            <label for="default2">default</label>
+        </div>
+    <div>
 
     <div>
         <div class="toggle toggle-lg">

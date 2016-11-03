@@ -1,0 +1,33 @@
+{
+  "name": "css-toggle-input",
+  "description": "An iOS style on/off toggle for checkboxes and radio inputs. Created with only css",
+  "main": "dist/css-toggle-input.css",
+  "authors": [
+    "Chutou"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "css-toggle-input",
+    "toggle",
+    "switch",
+    "checkbox",
+    "radio",
+    "input",
+    "on",
+    "off",
+    "on-off",
+    "ios",
+    "css",
+    "ui",
+    "ux"
+  ],
+  "homepage": "https://github.com/chutou/css-toggle-input",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
