@@ -1,0 +1,99 @@
+.toggle {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.toggle input {
+  display: none;
+}
+.toggle input:checked + label {
+  background: #0e90d2;
+}
+.toggle input:disabled + label {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.toggle label {
+  display: block;
+  background: #C7C7CC;
+  position: relative;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-size: 0;
+  cursor: pointer;
+}
+.toggle label:before {
+  content: '';
+  display: block;
+  background: white;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.toggle input:checked + label:before {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+.toggle label {
+  width: 50px;
+  height: 30px;
+  border-radius: 30px;
+}
+.toggle label:before {
+  width: 26px;
+  height: 26px;
+  border-radius: 30px;
+}
+.toggle + label {
+  font-weight: normal;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.toggle.toggle-primary input:checked + label {
+  background: #0e90d2;
+}
+.toggle.toggle-secondary input:checked + label {
+  background: #3bb4f2;
+}
+.toggle.toggle-success input:checked + label {
+  background: #5eb95e;
+}
+.toggle.toggle-warning input:checked + label {
+  background: #F37B1D;
+}
+.toggle.toggle-danger input:checked + label {
+  background: #dd514c;
+}
+.toggle.toggle-dark input:checked + label {
+  background: #333333;
+}
+.toggle.toggle-sm input:checked + label:before {
+  -webkit-transform: translateX(9.9999999px);
+          transform: translateX(9.9999999px);
+}
+.toggle.toggle-sm label {
+  width: 30px;
+  height: 20.0000001px;
+  border-radius: 20.0000001px;
+}
+.toggle.toggle-sm label:before {
+  width: 16.0000001px;
+  height: 16.0000001px;
+  border-radius: 30px;
+}
+.toggle.toggle-lg input:checked + label:before {
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+}
+.toggle.toggle-lg label {
+  width: 60px;
+  height: 36px;
+  border-radius: 36px;
+}
+.toggle.toggle-lg label:before {
+  width: 32px;
+  height: 32px;
+  border-radius: 30px;
+}

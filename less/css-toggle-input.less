@@ -1,0 +1,118 @@
+// variables
+@black:           #000;
+@global-primary: #0e90d2; // #157EFB; //#428bca;
+@global-secondary: lighten(@global-primary, 15%);
+@global-success: #5eb95e; // #53D76A; //#5cb85c;
+@global-warning: #F37B1D; // #FD9426; // #f0ad4e;
+@global-danger: #dd514c; // #FC3159; //#da314b;
+@gray-dark:       lighten(@black, 20%);   // #333
+
+@toggle-width: 50px;
+@toggle-height: 30px;
+@toggle-button-offset: 2px;
+@toggle-checked: @global-primary;
+@toggle-not-checked: #C7C7CC;
+// mixins
+.toggle-variant(@width, @height) {
+    input:checked + label:before {
+        transform: translateX(@width - @height);
+    }
+    label {
+        width: @width;
+        height: @height;
+        border-radius: @height;
+        &:before {
+            width: @height - 2 * @toggle-button-offset;
+            height: @height - 2 * @toggle-button-offset;
+            border-radius: @toggle-height;
+        }
+    }
+}
+
+// styles
+.toggle {
+    margin-bottom: 5px;
+    display: inline-block;
+    input {
+        display: none;
+        &:checked + label {
+            background: @toggle-checked;
+        }
+        &:disabled + label {
+            opacity: 0.5;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+    }
+    label {
+        display: block;
+        background: @toggle-not-checked;
+        position: relative;
+        transition: all .3s;
+        font-size: 0;
+        cursor: pointer;
+        &:before {
+            content: '';
+            display: block;
+            background: white;
+            position: relative;
+            top: @toggle-button-offset;
+            left: @toggle-button-offset;
+            transition: all .3s;
+        }
+    }
+    .toggle-variant(@toggle-width, @toggle-height);
+    & + label {
+        font-weight: normal;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+    &.toggle-primary {
+      input {
+          &:checked + label {
+              background: @global-primary;
+          }
+      }
+    }
+    &.toggle-secondary {
+      input {
+          &:checked + label {
+              background: @global-secondary;
+          }
+      }
+    }
+    &.toggle-success {
+      input {
+          &:checked + label {
+              background: @global-success;
+          }
+      }
+    }
+    &.toggle-warning {
+      input {
+          &:checked + label {
+              background: @global-warning;
+          }
+      }
+    }
+    &.toggle-danger {
+      input {
+          &:checked + label {
+              background: @global-danger;
+          }
+      }
+    }
+    &.toggle-dark {
+      input {
+          &:checked + label {
+              background: @gray-dark;
+          }
+      }
+    }
+    &.toggle-sm {
+      .toggle-variant(@toggle-width*0.6, @toggle-height*0.66666667);
+    }
+    &.toggle-lg {
+      .toggle-variant(@toggle-width*1.2, @toggle-height*1.2);
+    }
+}
